@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabla de colecciones por lenguajes</title>
+        <link rel="stylesheet" href="../style/styles.css">
+    </head>
+</head>
+<body>
+    <h2>Tabla de colecciones por lenguajes</h2>
+    <table id="resumen_colecciones_java" class="yes_no">
+        <thead>
+            <tr>
+                <th>Tipo de Colección</th>
+                <th>C++</th>
+                <th>Java</th>
+                <th>Python</th>
+                <th>JavaScript</th>
+                <th>PHP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Array/List</td>
+                <td>std::vector</td>
+                <td>ArrayList</td>
+                <td>list</td>
+                <td>Array</td>
+                <td>array()</td>
+            </tr>
+            <tr>
+                <td>Linked List</td>
+                <td>std::list</td>
+                <td>LinkedList</td>
+                <td>collections.deque (or custom)</td>
+                <td>Array (or custom implementation)</td>
+                <td>SPLLinkedList</td>
+            </tr>
+            <tr>
+                <td>Hash Table/Dictionary</td>
+                <td>std::unordered_map</td>
+                <td>HashMap</td>
+                <td>dict</td>
+                <td>Object</td>
+                <td>array() or ArrayObject</td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td>std::unordered_set</td>
+                <td>HashSet</td>
+                <td>set</td>
+                <td>Set</td>
+                <td>array() with unique values</td>
+            </tr>
+            <tr>
+                <td>Queue</td>
+                <td>std::queue</td>
+                <td>Queue (interface, use LinkedList or PriorityQueue)</td>
+                <td>collections.deque</td>
+                <td>Array (or custom implementation)</td>
+                <td>SPLQueue</td>
+            </tr>
+            <tr>
+                <td>Stack</td>
+                <td>std::stack</td>
+                <td>Stack (interface, use Vector or LinkedList)</td>
+                <td>list (use append() and pop())</td>
+                <td>Array (use push() and pop())</td>
+                <td>array() (use array_push() and array_pop())</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabla Comparativa entre lenguajes</title>
+        <link rel="stylesheet" href="../style/styles.css">
+    </head>
+</head>
+
+<body>
+    <h2>EJEMPLO</h2>
+    <table id="tabla_comparativa_1">
+        <thead>
+            <tr>
+                <th>Concepto</th>
+                <th>C/C++</th>
+                <th>Java</th>
+                <th>Python</th>
+                <th>JavaScript</th>
+                <th>PHP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Comentarios</td>
+                <td><code>// Una línea <br> /* Multilínea */</code></td>
+                <td><code>// Una línea <br> /* Multilínea */</code></td>
+                <td><code># Una línea <br> '''Multilínea''' o <br> """Multilínea"""</code></td>
+                <td><code>// Una línea <br> /* Multilínea */</code></td>
+                <td><code>// Una línea <br> /* Multilínea */</code></td>
+            </tr>
+            <tr>
+                <td>Declaración de Variables</td>
+                <td><code>int a = 10;</code></td>
+                <td><code>int a = 10;</code></td>
+                <td><code>a = 10</code></td>
+                <td><code>let a = 10;</code></td>
+                <td><code>$a = 10;</code></td>
+            </tr>
+            <tr>
+                <td>Funciones/Métodos</td>
+                <td><code>void miFuncion(int a) {}</code></td>
+                <td><code>public void miFuncion(int a) {}</code></td>
+                <td><code>def mi_funcion(a):
+# codigo </code></td>
+                <td><code>function miFuncion(a) {}</code></td>
+                <td><code>function miFuncion($a) {}</code></td>
+            </tr>
+            <tr>
+                <td>Clases y Objetos</td>
+                <td><code>class MiClase { 
+    int miVariable; 
+    void miMetodo() {} 
+}</code></td>
+                <td><code>public class MiClase { 
+    public int miVariable; 
+    public void miMetodo() {} 
+}</code></td>
+                <td><code>class MiClase: 
+    def __init__(self): 
+        self.mi_variable = 0 
+    def mi_metodo(self):
+        #mi codigo</code></td>
+                <td><code>class MiClase { 
+    constructor() { 
+    this.miVariable = 0; 
+} 
+miMetodo() {} 
+}</code></td>
+                <td><code>class MiClase { 
+    public $miVariable = 0; 
+    public function miMetodo() {} 
+}</code></td>
+            </tr>
+            <tr>
+                <td>Herencia</td>
+                <td><code>class Subclase : public Superclase {}</code></td>
+                <td><code>public class Subclase extends Superclase {}</code></td>
+                <td><code>class Subclase(Superclase):</code></td>
+                <td><code>class Subclase extends Superclase {}</code></td>
+                <td><code>class Subclase extends Superclase {}</code></td>
+            </tr>
+            <tr>
+                <td>Interfaces y Polimorfismo</td>
+                <td><code>class MiInterfaz { 
+virtual void miMetodo() = 0; 
+}</code></td>
+                <td><code>interface MiInterfaz { 
+void miMetodo(); 
+}</code></td>
+                <td><code>from abc import ABC, 
+abstractmethod class MiInterfaz(ABC): 
+@abstractmethod def mi_metodo(self): pass</code></td>
+                <td><code>Simulación con clases/objetos</code></td>
+                <td><code>interface MiInterfaz { public function miMetodo(); }</code></td>
+            </tr>
+            <tr>
+                <td>Manejo de Excepciones</td>
+                <td><code>try { //code } 
+catch (exception& e) { //code exception }</code></td>
+                <td><code>try { } 
+catch (Exception e) { }</code></td>
+                <td><code>try: 
+    #code
+except Exception as e:
+    print(type(e)) # the exception type
+    print(e.args)  # arguments stored in .args</code></td>
+                <td><code>try { } 
+catch (e) { }</code></td>
+                <td><code>try { } 
+catch (Exception $e) { }</code></td>
+            </tr>
+            <tr>
+                <td>Entrada/Salida Básica</td>
+                <td><code>printf("Mensaje"); 
+scanf("%d", &variable);</code></td>
+                <td><code>System.out.println("Mensaje");
+Scanner scanner = new Scanner(System.in);
+variable = scanner.nextInt();</code></td>
+                <td><code>print("Mensaje")
+variable = input()</code></td>
+                <td><code>alert("Mensaje");
+variable = prompt("Ingrese un valor");</code></td>
+                <td><code>echo "Mensaje";
+$variable = readline("Ingrese un valor: ");</code></td>
+            </tr>
+            <tr>
+                <td>Acceso a Ficheros</td>
+                <td><code>FILE *fichero = fopen("archivo.txt", "r"); 
+fclose(fichero);</code></td>
+                <td><code>FileReader fr = new FileReader("archivo.txt"); 
+fr.close();</code></td>
+                <td><code>with open('archivo.txt', 'r') as fichero: 
+    contenido = fichero.read()</code></td>
+                <td><code>const fs = require('fs'); 
+let contenido = fs.readFileSync('archivo.txt', 'utf8');</code></td>
+                <td><code>$fichero = fopen("archivo.txt", "r");
+fclose($fichero);</code></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

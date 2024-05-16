@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+	word-break: keep-all;
+}
+
+h2 {
+    color: #444;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    font-size: 12px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #3FA9F5;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 5px;
+    }
+    table {
+        font-size: 12px;
+    }
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #eee;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+table code {
+    display: block; /* Hace que el código se muestre en bloque, útil si tienes múltiples líneas */
+    white-space: pre-wrap; /* Asegura que el código se ajuste dentro de la celda */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .responsive-image {
+        width: 80%; /* Ajusta este valor según tus necesidades */
+    }
+}
+
+details > summary {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+details > iframe {
+    width: 100%; 
+    height: 600px;
+    border: none;
+}
+
+details {
+    margin: 5px 0;
+}
+
+.button-like {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #3FA9F5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button-like:hover {
+    background-color: #007bff;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    max-height: 500px;
+    border: none;
+}
+
+@media (max-width: 600px) {
+    iframe {
+        height: 300px;
+    }
+}

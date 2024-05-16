@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabla comparativa entre lenguajes 2</title>
+        <link rel="stylesheet" href="../style/styles.css">
+    </head>
+</head>
+<body>
+    <h2>Tabla comparativa entre lenguajes</h2>
+    <table id="tabla_comparativa_2">
+        <thead>
+            <tr>
+                <th>Concepto</th>
+                <th>C/C++</th>
+                <th>Java</th>
+                <th>Python</th>
+                <th>PHP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Multithreading/Concurrencia</td>
+                <td><code>TBD</code></td>
+                <td><code>//Implementando Runnable:
+public class HelloRunnable implements Runnable {
+    public void run() {
+        System.out.println("Hello from a thread!");
+    }
+
+    public static void main(String args[]) {
+        (new Thread(new HelloRunnable())).start();
+    }
+}
+//Extendiendo Thread:
+
+public class HelloThread extends Thread {
+    public void run() {
+        System.out.println("Hello from a thread!");
+    }
+
+    public static void main(String args[]) {
+        (new HelloThread()).start();
+    }
+}
+//Ejemplo de Sincronización
+
+public class Counter {
+    private int count = 0;
+
+    public synchronized void increment() {
+        count++;
+    }
+
+    public synchronized int getCount() {
+        return count;
+    }
+}
+
+//Ejemplo con Executors
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
+public class ExecutorsExample {
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newFixedThreadPool(5);
+
+        for (int i = 0; i < 10; i++) {
+            Runnable worker = new WorkerThread("" + i);
+            executor.execute(worker);
+        }
+
+        executor.shutdown();
+        try {
+            executor.awaitTermination(5, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Finished all threads");
+    }
+}
+
+class WorkerThread implements Runnable {
+    private String command;
+
+    public WorkerThread(String s) {
+        this.command = s;
+    }
+
+    @Override
+    public void run() {
+        System.out.println(Thread.currentThread().getName() + " Start. Command = " + command);
+        processCommand();
+        System.out.println(Thread.currentThread().getName() + " End.");
+    }
+
+    private void processCommand() {
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></td>
+                <td><code>TBD</code></td>
+                <td><code>TBD</code></td>
+            </tr>
+            <tr>
+                <td>Conexión a base de datos sql</td>
+                <td><code></code></td>
+                <td><code></code></td>
+                <td><code>import mysql.connector
+# Diccionario Datos de Conexion
+config_mysql = {
+    'user': 'root',
+    'password': '',
+    'host': 'localhost',
+    'database': 'principal',
+}
+
+# Objeto Conexion
+conexion_mysql = mysql.connector.connect(**config_mysql)
+
+# Objeto cursor     // permitira hacer las consultas
+cursor = conexion_mysql.cursor()
+
+#   Ejecucion de la consulta
+cursor.execute("SELECT * FROM servicios_io_f limit 0,10")
+
+for (Campo1, Campo2, Campo3, Campo2, Campo3) in cursor:
+    print("Campo1: " + Campo1 + ", Campo2: " + str(Campo2) + ", Campo3: " + str(Campo3))
+
+# Cerramos la variable encargada de las consultas
+cursor.close()
+#   cierre de conexion
+conexion_mysql.close()
+                </code></td>
+                <td><code>&lt;?php
+// Datos para la conexión
+$host = "localhost";
+$puerto = "3306";
+$user = "root";
+$pass = "abc123.";
+$dbname = "EXAMEN";
+
+// Conexión a la base de datos
+$conexion = mysqli_connect($host . ":" . $puerto, $user, $pass, $dbname);
+
+// Verificar la conexión
+if (!$conexion) {
+    die("Conexión fallida: " . mysqli_connect_error());
+}
+
+// Recuperar los datos del formulario
+$login = mysqli_real_escape_string($conexion, $_POST['user']);
+$password = mysqli_real_escape_string($conexion, $_POST['password']);
+
+// Consulta SQL para verificar las credenciales
+$sql = "SELECT * FROM USUARIO WHERE login = ? AND password = ?";
+$stmt = mysqli_prepare($conexion, $sql);
+mysqli_stmt_bind_param($stmt, "ss", $login, $password);
+mysqli_stmt_execute($stmt);
+$resultado = mysqli_stmt_get_result($stmt);
+
+// Verificar si se encontró el usuario
+if (mysqli_num_rows($resultado) > 0) {
+    // Usuario encontrado
+    echo "Credenciales correctas. Bienvenido, $login.";
+} else {
+    // Usuario no encontrado
+    echo "Login o password INCORRECTA. <a href='VerificarCredenciales.html'>Intentar nuevamente</a>";
+}
+
+//////////////////////////////////////////////////////////////////
+//Si quisiereamos recorrer los resultados obtenidos...
+while ($row = mysqli_fetch_array($resultado, MYSQLI_NUM)){ //MYSQLI_NUM indica que queremos acceder a los resultados mediante un indice numerico, y no como array asociativo (sería MYSQLI_ASSOC)
+    foreach($row as $r){
+       print("$r ");
+    }
+    print("\n");
+}	
+
+//////////////////////////////////////////////////////////////////
+// Supongamos que tenemos una consulta SQL que necesita un entero, un string y un double
+$id = 10; // entero
+$nombre = "John Doe"; // string
+$salario = 5000.50; // double
+
+// Preparamos la consulta SQL
+$sql = "INSERT INTO empleados (id, nombre, salario) VALUES (?, ?, ?)";
+$stmt = mysqli_prepare($conexion, $sql);
+
+// Vinculamos los parámetros con tipos mixtos: i para entero, s para string, y d para double
+mysqli_stmt_bind_param($stmt, "isd", $id, $nombre, $salario);
+
+// Ejecutamos la sentencia
+mysqli_stmt_execute($stmt);
+
+/////////////////////////////////////////////////////////////////
+//Manejo de errores
+if (!$stmt = mysqli_prepare($conexion, $sql)) {
+    // Manejar error de preparación
+}
+
+if (!mysqli_stmt_bind_param($stmt, "isd", $id, $nombre, $salario)) {
+    // Manejar error de vinculación de parámetros
+}
+
+if (!mysqli_stmt_execute($stmt)) {
+    // Manejar error de ejecución
+}
+
+//Cierre de la sentencia
+mysqli_stmt_close($stmt);
+
+// Cerrar la conexión
+mysqli_close($conexion);
+?>
+                    </code></td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>

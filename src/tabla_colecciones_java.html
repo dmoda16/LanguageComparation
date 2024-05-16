@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabla de métodos de cadenas de caracteres en Python</title>
+        <link rel="stylesheet" href="../style/styles.css">
+        <script src="../js/tablas.js"></script>
+    </head>
+</head>
+<body>
+    <h2>EJEMPLO</h2>
+    <table id="colecciones_java" class="yes_no">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Base Class</th>
+                <th>Base Interface</th>
+                <th>Admit Duplicates</th>
+                <th>Admit Null</th>
+                <th>Inserted Order?</th>
+                <th>Sorted Order?</th>
+                <th>Sync?</th>
+                <th>Random Access</th>
+                <th>Default Capacity</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ArrayList</td>
+                <td>AbstractList</td>
+                <td>List</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>10</td>
+                <td>It supports dynamic arrays that can grow as needed.</td>
+            </tr>
+            <tr>
+                <td>LinkedList</td>
+                <td>AbstractSequentialList</td>
+                <td>List, Deque, Queue</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>0</td>
+                <td>It provides a Linked List data structure.</td>
+            </tr>
+            <tr>
+                <td>HashSet</td>
+                <td>AbstractSet</td>
+                <td>Set</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>16</td>
+                <td>It creates a collection that uses hash table for storage.</td>
+            </tr>
+            <tr>
+                <td>LinkedHashSet</td>
+                <td>HashSet</td>
+                <td>-</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>16</td>
+                <td>It creates a Linked List with no duplicate elements.</td>
+            </tr>
+            <tr>
+                <td>TreeSet</td>
+                <td>AbstractSet</td>
+                <td>Navigable Set</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td>16</td>
+                <td>It uses trees for storage. By default, objects are stored in ascending order.</td>
+            </tr>
+            <tr>
+                <td>PriorityQueue</td>
+                <td>AbstractQueue</td>
+                <td>Queue</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td>11</td>
+                <td>It creates a queue that is prioritized based on the queue's comparator.</td>
+            </tr>
+            <tr>
+                <td>ArrayDeque</td>
+                <td>AbstractCollection</td>
+                <td>Deque</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>16</td>
+                <td>It creates a dynamic array.</td>
+            </tr>
+            <tr>
+                <td>EnumSet</td>
+                <td>AbstractSet</td>
+                <td>Set</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>16</td>
+                <td>It is specifically for use with elements of enum type.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

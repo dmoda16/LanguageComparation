@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Comparativa de Lenguajes de Programación</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <script src="js/lenguajes.js"></script>
+</head>
+
+<body>
+    <h1>Referencia lenguajes de programación</h1>
+    <h2>Comparativa de Lenguajes de Programación: C, C++, Java, Python, JavaScript, PHP</h2>
+
+    <details class="details-element">
+        <summary class="button-like">Ver Tabla comparativa 1 de lenguajes</summary>
+        <iframe src="src/tabla_comparativa_1.html"></iframe>
+    </details>
+
+    <br>
+
+    <details class="details-element">
+        <summary class="button-like">Ver Tabla comparativa 2 de lenguajes</summary>
+        <iframe src="src/tabla_comparativa_2.html"></iframe>
+    </details>
+
+    <br>
+
+    <h2>Resumen de colecciones por lenguajes</h2>
+    <details class="details-element">
+        <summary class="button-like">Resumen de colecciones por lenguajes</summary>
+        <iframe src="src/tabla_colecciones.html"></iframe>
+    </details>
+
+    <br>
+
+    <h1>Java</h1>
+
+    <h2>Diagrama de clases de Colleciones en Java</h2>
+    <div class="image-container">
+        <img src="img/java-collection-hierarchy.png" alt="Descripción de la imagen" class="responsive-image">
+    </div>
+
+    <h2>Tabla resumen colecciones Java</h2>
+    <br>
+    <details class="details-element">
+        <summary class="button-like">ver comparacion de colecciones en Java</summary>
+        <iframe src="src/tabla_colecciones_java.html"></iframe>
+    </details>
+
+    <br>
+    <details class="details-element">
+        <summary class="button-like">Ver Tabla comparativa 2 de lenguajes</summary>
+        <iframe src="src/tabla_metodos_colecciones_java.html"></iframe>
+    </details>
+
+    <h2>Comparativa metodos para listas entre lenguajes</h2>
+    <table id="comparativa_metodos_listas_lenguajes">
+        <thead>
+            <tr>
+                <th>Operación</th>
+                <th>C++</th>
+                <th>Java</th>
+                <th>Python</th>
+                <th>JavaScript</th>
+                <th>PHP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Constructor</td>
+                <td>std::vector&lt;int&gt; lista;</td>
+                <td>List&lt;Integer&gt; lista = new ArrayList&lt;&gt;();</td>
+                <td>lista = []</td>
+                <td>let lista = []</td>
+                <td>$lista = array();</td>
+            </tr>
+            <tr>
+                <td>Insertar (al final)</td>
+                <td>lista.push_back(valor);</td>
+                <td>lista.add(valor);</td>
+                <td>lista.append(valor)</td>
+                <td>lista.push(valor);</td>
+                <td>array_push($lista, valor);</td>
+            </tr>
+            <tr>
+                <td>Insertar (en índice)</td>
+                <td>lista.insert(lista.begin() + índice, valor);</td>
+                <td>lista.add(índice, valor);</td>
+                <td>lista.insert(índice, valor)</td>
+                <td>lista.splice(índice, 0, valor);</td>
+                <td>array_splice($lista, índice, 0, valor);</td>
+            </tr>
+            <tr>
+                <td>Borrar (por índice)</td>
+                <td>lista.erase(lista.begin() + índice);</td>
+                <td>lista.remove(índice);</td>
+                <td>del lista[índice]</td>
+                <td>lista.splice(índice, 1);</td>
+                <td>array_splice($lista, índice, 1);</td>
+            </tr>
+            <tr>
+                <td>Borrar (por valor)</td>
+                <td>lista.erase(std::remove(lista.begin(), lista.end(), valor), lista.end());</td>
+                <td>lista.remove(valor);</td>
+                <td>lista.remove(valor)</td>
+                <td>lista.splice(lista.indexOf(valor), 1);</td>
+                <td>unset($lista[array_search(valor, $lista)]);</td>
+            </tr>
+            <tr>
+                <td>Obtener</td>
+                <td>lista[índice];</td>
+                <td>lista.get(índice);</td>
+                <td>lista[índice]</td>
+                <td>lista[índice];</td>
+                <td>$lista[índice];</td>
+            </tr>
+            <tr>
+                <td>Está vacía?</td>
+                <td>lista.empty();</td>
+                <td>lista.isEmpty();</td>
+                <td>not lista</td>
+                <td>lista.length === 0</td>
+                <td>empty($lista);</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Comparativa metodos para Vectores entre lenguajes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Operación</th>
+                <th>C++</th>
+                <th>Java</th>
+                <th>Python</th>
+                <th>JavaScript</th>
+                <th>PHP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Constructor</td>
+                <td>std::vector&lt;int&gt; vec;</td>
+                <td>Vector&lt;Integer&gt; vec = new Vector&lt;&gt;();</td>
+                <td>vec = []</td>
+                <td>let vec = []</td>
+                <td>$vec = array();</td>
+            </tr>
+            <tr>
+                <td>Insertar (al final)</td>
+                <td>vec.push_back(valor);</td>
+                <td>vec.add(valor);</td>
+                <td>vec.append(valor)</td>
+                <td>vec.push(valor);</td>
+                <td>array_push($vec, valor);</td>
+            </tr>
+            <tr>
+                <td>Insertar (en índice)</td>
+                <td>vec.insert(vec.begin() + índice, valor);</td>
+                <td>vec.add(índice, valor);</td>
+                <td>vec.insert(índice, valor)</td>
+                <td>vec.splice(índice, 0, valor);</td>
+                <td>array_splice($vec, índice, 0, valor);</td>
+            </tr>
+            <tr>
+                <td>Borrar (por índice)</td>
+                <td>vec.erase(vec.begin() + índice);</td>
+                <td>vec.remove(índice);</td>
+                <td>del vec[índice]</td>
+                <td>vec.splice(índice, 1);</td>
+                <td>array_splice($vec, índice, 1);</td>
+            </tr>
+            <tr>
+                <td>Borrar (por valor)</td>
+                <td>vec.erase(std::remove(vec.begin(), vec.end(), valor), vec.end());</td>
+                <td>vec.remove(valor);</td>
+                <td>vec.remove(valor)</td>
+                <td>vec.splice(vec.indexOf(valor), 1);</td>
+                <td>unset($vec[array_search(valor, $vec)]);</td>
+            </tr>
+            <tr>
+                <td>Obtener</td>
+                <td>vec[índice];</td>
+                <td>vec.get(índice);</td>
+                <td>vec[índice]</td>
+                <td>vec[índice];</td>
+                <td>$vec[índice];</td>
+            </tr>
+            <tr>
+                <td>Está vacía?</td>
+                <td>vec.empty();</td>
+                <td>vec.isEmpty();</td>
+                <td>not vec</td>
+                <td>vec.length === 0</td>
+                <td>empty($vec);</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Comparativa metodos para Mapas entre lenguajes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Operación</th>
+                <th>C++</th>
+                <th>Java</th>
+                <th>Python</th>
+                <th>JavaScript</th>
+                <th>PHP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Constructor</td>
+                <td>std::map&lt;Key, Value&gt; mapa;</td>
+                <td>Map&lt;Key, Value&gt; mapa = new HashMap&lt;&gt;();</td>
+                <td>mapa = {}</td>
+                <td>let mapa = new Map();</td>
+                <td>$mapa = array();</td>
+            </tr>
+            <tr>
+                <td>Insertar</td>
+                <td>mapa[key] = value;</td>
+                <td>mapa.put(key, value);</td>
+                <td>mapa[key] = value</td>
+                <td>mapa.set(key, value);</td>
+                <td>$mapa[key] = value;</td>
+            </tr>
+            <tr>
+                <td>Borrar (por clave)</td>
+                <td>mapa.erase(key);</td>
+                <td>mapa.remove(key);</td>
+                <td>del mapa[key]</td>
+                <td>mapa.delete(key);</td>
+                <td>unset($mapa[key]);</td>
+            </tr>
+            <tr>
+                <td>Obtener</td>
+                <td>mapa[key];</td>
+                <td>mapa.get(key);</td>
+                <td>mapa[key]</td>
+                <td>mapa.get(key);</td>
+                <td>$mapa[key];</td>
+            </tr>
+            <tr>
+                <td>Contiene clave?</td>
+                <td>mapa.find(key) != mapa.end();</td>
+                <td>mapa.containsKey(key);</td>
+                <td>key in mapa</td>
+                <td>mapa.has(key);</td>
+                <td>array_key_exists(key, $mapa);</td>
+            </tr>
+            <tr>
+                <td>Está vacío?</td>
+                <td>mapa.empty();</td>
+                <td>mapa.isEmpty();</td>
+                <td>not mapa</td>
+                <td>mapa.size === 0</td>
+                <td>empty($mapa);</td>
+            </tr>
+            <tr>
+                <td>Tamaño</td>
+                <td>mapa.size();</td>
+                <td>mapa.size();</td>
+                <td>len(mapa)</td>
+                <td>mapa.size;</td>
+                <td>count($mapa);</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Comparativa metodos para Árboles entre lenguajes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Operación</th>
+                <th>C++ (STL)</th>
+                <th>Java (TreeSet/TreeMap)</th>
+                <th>Python (anytree)</th>
+                <th>JavaScript (Custom)</th>
+                <th>PHP (Custom)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Constructor</td>
+                <td>std::set&lt;int&gt; tree;</td>
+                <td>TreeSet&lt;Integer&gt; tree = new TreeSet&lt;&gt;();</td>
+                <td>from anytree import Node; root = Node("root")</td>
+                <td>function Node(value) { this.value = value; this.children = []; }</td>
+                <td>class Node { public $value; public $children = array(); function __construct($value) { $this->value
+                    = $value; } }</td>
+            </tr>
+            <tr>
+                <td>Insertar</td>
+                <td>tree.insert(value);</td>
+                <td>tree.add(value);</td>
+                <td>child = Node("child", parent=root)</td>
+                <td>let child = new Node(value); parent.children.push(child);</td>
+                <td>$child = new Node($value); array_push($parent->children, $child);</td>
+            </tr>
+            <tr>
+                <td>Borrar</td>
+                <td>tree.erase(value);</td>
+                <td>tree.remove(value);</td>
+                <td>child.parent = None</td>
+                <td>parent.children.splice(index, 1);</td>
+                <td>unset($parent->children[$index]);</td>
+            </tr>
+            <tr>
+                <td>Obtener (buscar)</td>
+                <td>tree.find(value) != tree.end();</td>
+                <td>tree.contains(value);</td>
+                <td>next(n for n in root.descendants if n.name == "child")</td>
+                <td>function findNode(root, value) { /* custom search */ }</td>
+                <td>function findNode($root, $value) { /* custom search */ }</td>
+            </tr>
+            <tr>
+                <td>Recorrer</td>
+                <td>for(auto it = tree.begin(); it != tree.end(); ++it)</td>
+                <td>for(Integer val : tree)</td>
+                <td>for node in root.descendants</td>
+                <td>function traverse(node) { /* custom traversal */ }</td>
+                <td>function traverse($node) { /* custom traversal */ }</td>
+            </tr>
+            <tr>
+                <td>Altura</td>
+                <td>int height(Node* node) { /* custom height calculation */ }</td>
+                <td>int height(Node node) { /* custom height calculation */ }</td>
+                <td>root.height</td>
+                <td>function height(node) { /* custom height calculation */ }</td>
+                <td>function height($node) { /* custom height calculation */ }</td>
+            </tr>
+            <tr>
+                <td>Está vacío?</td>
+                <td>tree.empty();</td>
+                <td>tree.isEmpty();</td>
+                <td>root.is_leaf</td>
+                <td>root.children.length === 0</td>
+                <td>empty($root->children);</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Comparativa metodos para sets entre lenguajes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Operación</th>
+                <th>C++</th>
+                <th>Java</th>
+                <th>Python</th>
+                <th>JavaScript</th>
+                <th>PHP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Constructor</td>
+                <td>std::set&lt;int&gt; mySet;</td>
+                <td>Set&lt;Integer&gt; mySet = new HashSet&lt;&gt;();</td>
+                <td>mySet = set()</td>
+                <td>let mySet = new Set();</td>
+                <td>$mySet = array();</td>
+            </tr>
+            <tr>
+                <td>Insertar</td>
+                <td>mySet.insert(value);</td>
+                <td>mySet.add(value);</td>
+                <td>mySet.add(value)</td>
+                <td>mySet.add(value);</td>
+                <td>$mySet[value] = true;</td>
+            </tr>
+            <tr>
+                <td>Borrar</td>
+                <td>mySet.erase(value);</td>
+                <td>mySet.remove(value);</td>
+                <td>mySet.remove(value)</td>
+                <td>mySet.delete(value);</td>
+                <td>unset($mySet[value]);</td>
+            </tr>
+            <tr>
+                <td>Contiene</td>
+                <td>mySet.find(value) != mySet.end();</td>
+                <td>mySet.contains(value);</td>
+                <td>value in mySet</td>
+                <td>mySet.has(value);</td>
+                <td>isset($mySet[value]);</td>
+            </tr>
+            <tr>
+                <td>Tamaño</td>
+                <td>mySet.size();</td>
+                <td>mySet.size();</td>
+                <td>len(mySet)</td>
+                <td>mySet.size;</td>
+                <td>count($mySet);</td>
+            </tr>
+            <tr>
+                <td>Está vacío?</td>
+                <td>mySet.empty();</td>
+                <td>mySet.isEmpty();</td>
+                <td>len(mySet) == 0</td>
+                <td>mySet.size === 0</td>
+                <td>empty($mySet);</td>
+            </tr>
+            <tr>
+                <td>Limpiar</td>
+                <td>mySet.clear();</td>
+                <td>mySet.clear();</td>
+                <td>mySet.clear()</td>
+                <td>mySet.clear();</td>
+                <td>$mySet = array();</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Comparativa metodos para pilas entre lenguajes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Operación</th>
+                <th>C++ (std::stack)</th>
+                <th>Java (Stack)</th>
+                <th>Python (list)</th>
+                <th>JavaScript (Array)</th>
+                <th>PHP (Array)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Constructor</td>
+                <td>std::stack&lt;int&gt; pila;</td>
+                <td>Stack&lt;Integer&gt; pila = new Stack&lt;&gt;();</td>
+                <td>pila = []</td>
+                <td>let pila = [];</td>
+                <td>$pila = array();</td>
+            </tr>
+            <tr>
+                <td>Push</td>
+                <td>pila.push(value);</td>
+                <td>pila.push(value);</td>
+                <td>pila.append(value)</td>
+                <td>pila.push(value);</td>
+                <td>array_push($pila, value);</td>
+            </tr>
+            <tr>
+                <td>Pop</td>
+                <td>pila.pop();</td>
+                <td>pila.pop();</td>
+                <td>pila.pop()</td>
+                <td>pila.pop();</td>
+                <td>array_pop($pila);</td>
+            </tr>
+            <tr>
+                <td>Peek</td>
+                <td>pila.top();</td>
+                <td>pila.peek();</td>
+                <td>pila[-1]</td>
+                <td>pila[pila.length - 1];</td>
+                <td>end($pila);</td>
+            </tr>
+            <tr>
+                <td>Está vacía?</td>
+                <td>pila.empty();</td>
+                <td>pila.isEmpty();</td>
+                <td>len(pila) == 0</td>
+                <td>pila.length === 0</td>
+                <td>empty($pila);</td>
+            </tr>
+            <tr>
+                <td>Tamaño</td>
+                <td>pila.size();</td>
+                <td>pila.size();</td>
+                <td>len(pila)</td>
+                <td>pila.length;</td>
+                <td>count($pila);</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Comparativa metodos para colas entre lenguajes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Operación</th>
+                <th>C++ (std::queue)</th>
+                <th>Java (Queue)</th>
+                <th>Python (collections.deque)</th>
+                <th>JavaScript (Array)</th>
+                <th>PHP (Array)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Constructor</td>
+                <td>std::queue&lt;int&gt; cola;</td>
+                <td>Queue&lt;Integer&gt; cola = new LinkedList&lt;&gt;();</td>
+                <td>from collections import deque; cola = deque()</td>
+                <td>let cola = [];</td>
+                <td>$cola = array();</td>
+            </tr>
+            <tr>
+                <td>Enqueue</td>
+                <td>cola.push(value);</td>
+                <td>cola.add(value);</td>
+                <td>cola.append(value)</td>
+                <td>cola.push(value);</td>
+                <td>array_push($cola, value);</td>
+            </tr>
+            <tr>
+                <td>Dequeue</td>
+                <td>cola.pop();</td>
+                <td>cola.poll();</td>
+                <td>cola.popleft()</td>
+                <td>cola.shift();</td>
+                <td>array_shift($cola);</td>
+            </tr>
+            <tr>
+                <td>Peek</td>
+                <td>cola.front();</td>
+                <td>cola.peek();</td>
+                <td>cola[0]</td>
+                <td>cola[0];</td>
+                <td>reset($cola);</td>
+            </tr>
+            <tr>
+                <td>Está vacía?</td>
+                <td>cola.empty();</td>
+                <td>cola.isEmpty();</td>
+                <td>len(cola) == 0</td>
+                <td>cola.length === 0</td>
+                <td>empty($cola);</td>
+            </tr>
+            <tr>
+                <td>Tamaño</td>
+                <td>cola.size();</td>
+                <td>cola.size();</td>
+                <td>len(cola)</td>
+                <td>cola.length;</td>
+                <td>count($cola);</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+</html>

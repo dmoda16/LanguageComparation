@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabla de métodos de cadenas de caracteres en Python</title>
+        <link rel="stylesheet" href="../style/styles.css">
+    </head>
+</head>
+<body>
+    <h2>Métodos de Cadenas de Caracteres en Python</h2>
+    <table>
+        <tr>
+            <th>Método</th>
+            <th>Descripción</th>
+            <th>Ejemplo de Uso</th>
+        </tr>
+        <tr>
+            <td>str.lower()</td>
+            <td>Convierte todos los caracteres de la cadena a minúsculas.</td>
+            <td>'HELLO'.lower() -&gt; 'hello'</td>
+        </tr>
+        <tr>
+            <td>str.upper()</td>
+            <td>Convierte todos los caracteres de la cadena a mayúsculas.</td>
+            <td>'hello'.upper() -&gt; 'HELLO'</td>
+        </tr>
+        <tr>
+            <td>str.capitalize()</td>
+            <td>Convierte el primer carácter de la cadena a mayúscula.</td>
+            <td>'hello'.capitalize() -&gt; 'Hello'</td>
+        </tr>
+        <tr>
+            <td>str.title()</td>
+            <td>Convierte el primer carácter de cada palabra a mayúscula.</td>
+            <td>'hello world'.title() -&gt; 'Hello World'</td>
+        </tr>
+        <tr>
+            <td>str.strip()</td>
+            <td>Elimina los espacios en blanco al inicio y al final de la cadena.</td>
+            <td>'  hello  '.strip() -&gt; 'hello'</td>
+        </tr>
+        <tr>
+            <td>str.lstrip()</td>
+            <td>Elimina los espacios en blanco al inicio de la cadena.</td>
+            <td>'  hello'.lstrip() -&gt; 'hello'</td>
+        </tr>
+        <tr>
+            <td>str.rstrip()</td>
+            <td>Elimina los espacios en blanco al final de la cadena.</td>
+            <td>'hello  '.rstrip() -&gt; 'hello'</td>
+        </tr>
+        <tr>
+            <td>str.replace(old, new)</td>
+            <td>Reemplaza todas las apariciones de una subcadena por otra.</td>
+            <td>'hello world'.replace('world', 'Python') -&gt; 'hello Python'</td>
+        </tr>
+        <tr>
+            <td>str.split(sep)</td>
+            <td>Divide la cadena en una lista utilizando un separador.</td>
+            <td>'hello world'.split(' ') -&gt; ['hello', 'world']</td>
+        </tr>
+        <tr>
+            <td>str.join(iterable)</td>
+            <td>Une los elementos de un iterable en una cadena, separados por la cadena actual.</td>
+            <td>', '.join(['a', 'b', 'c']) -&gt; 'a, b, c'</td>
+        </tr>
+        <tr>
+            <td>str.find(sub)</td>
+            <td>Devuelve el índice de la primera aparición de una subcadena, o -1 si no se encuentra.</td>
+            <td>'hello'.find('e') -&gt; 1</td>
+        </tr>
+        <tr>
+            <td>str.index(sub)</td>
+            <td>Devuelve el índice de la primera aparición de una subcadena, lanza ValueError si no se encuentra.</td>
+            <td>'hello'.index('e') -&gt; 1</td>
+        </tr>
+        <tr>
+            <td>str.startswith(prefix)</td>
+            <td>Devuelve True si la cadena comienza con el prefijo especificado.</td>
+            <td>'hello'.startswith('he') -&gt; True</td>
+        </tr>
+        <tr>
+            <td>str.endswith(suffix)</td>
+            <td>Devuelve True si la cadena termina con el sufijo especificado.</td>
+            <td>'hello'.endswith('lo') -&gt; True</td>
+        </tr>
+        <tr>
+            <td>str.isalpha()</td>
+            <td>Devuelve True si todos los caracteres de la cadena son alfabéticos.</td>
+            <td>'hello'.isalpha() -&gt; True</td>
+        </tr>
+        <tr>
+            <td>str.isdigit()</td>
+            <td>Devuelve True si todos los caracteres de la cadena son dígitos.</td>
+            <td>'123'.isdigit() -&gt; True</td>
+        </tr>
+        <tr>
+            <td>str.isalnum()</td>
+            <td>Devuelve True si todos los caracteres de la cadena son alfanuméricos.</td>
+            <td>'hello123'.isalnum() -&gt; True</td>
+        </tr>
+        <tr>
+            <td>str.isspace()</td>
+            <td>Devuelve True si la cadena solo contiene espacios en blanco.</td>
+            <td>'   '.isspace() -&gt; True</td>
+        </tr>
+        <tr>
+            <td>str.zfill(width)</td>
+            <td>Rellena la cadena con ceros a la izquierda hasta alcanzar el ancho especificado.</td>
+            <td>'42'.zfill(5) -&gt; '00042'</td>
+        </tr>
+        <tr>
+            <td>str.format(*args, **kwargs)</td>
+            <td>Formatea la cadena usando sustituciones de campo.</td>
+            <td>'Hello, {}'.format('world') -&gt; 'Hello, world'</td>
+        </tr>
+    </table>
+</body>
+</html>
